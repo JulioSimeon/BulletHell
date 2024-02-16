@@ -1,0 +1,170 @@
+[
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\BasePawn.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\BasePawn.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\BossShip.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\BossShip.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\BulletHell.Build.cs",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\BulletHell.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\BulletHell.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\BulletHellGameMode.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\BulletHellGameMode.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\BulletHellGameModeBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\BulletHellGameModeBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\BulletHellPlayerController.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\BulletHellPlayerController.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\EnemyShip.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\EnemyShip.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\HealthComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\HealthComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\PlayerShip.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\PlayerShip.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\Projectile.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\Source\\BulletHell\\Projectile.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Tiber Septimus\\Documents\\Unreal Projects\\BulletHell\\.vscode\\compileCommands_BulletHell\\BulletHell.261.rsp"
+		],
+		"directory": "C:\\Epic Games\\UE_5.2\\Engine\\Source"
+	}
+]
