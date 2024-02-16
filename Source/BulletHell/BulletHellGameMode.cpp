@@ -26,8 +26,7 @@ void ABulletHellGameMode::ActorDied(AActor* DeadActor)
         {
             if(ABossShip* Parent = Cast<ABossShip>(BossShip->GetOwner()))//if BossShip has a parent and the parent is still alive
             {
-                Parent->UpdateChildShipStatus(BossShip);
-                //Let parent know that its child has died so that it can spawn new child
+                Parent->UpdateChildShipStatus(BossShip);//Let parent know that its child has died so that it can spawn new child
             }
         }
         EnemyShip->HandleDestruction();
@@ -38,7 +37,6 @@ void ABulletHellGameMode::BeginPlay()
 {
     Super::BeginPlay();
     HandleGameStart();
-    
 }
 
 void ABulletHellGameMode::HandleGameStart()
@@ -55,4 +53,9 @@ void ABulletHellGameMode::HandleGameStart()
             FTimerDelegate PlayerEnableTimerDelegate = FTimerDelegate::CreateUObject(BulletHellPlayerController, &ABulletHellPlayerController::SetPlayerEnabledState, true);
             GetWorldTimerManager().SetTimer(PlayerEnableTimerHandle, PlayerEnableTimerDelegate, StartDelay, false);
         }
+}
+
+void ABulletHellGameMode::SpawnEnemies()
+{
+    
 }

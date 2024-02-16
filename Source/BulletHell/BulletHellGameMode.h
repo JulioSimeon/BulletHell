@@ -32,4 +32,6 @@ private:
 
 	void HandleGameStart();
 
+	UFUNCTION(BlueprintCallable)
+	void SpawnEnemies();
 };
