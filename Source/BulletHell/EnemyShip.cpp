@@ -3,6 +3,7 @@
 
 #include "EnemyShip.h"
 #include "Projectile.h"
+#include "Kismet/KismetMathLibrary.h"
 //#include "TimerManager.h"
 
 AEnemyShip::AEnemyShip()
@@ -26,6 +27,8 @@ void AEnemyShip::BeginPlay()
 {
     Super::BeginPlay();
     GetWorldTimerManager().SetTimer(FireRateTimerHandle, this, &AEnemyShip::Fire, FireRate, true);
+    
+    XOriginalLocation = GetActorLocation().X;
 }
 
 void AEnemyShip::Fire()
@@ -87,11 +90,21 @@ void AEnemyShip::Move(float DeltaTime)
     else
     {
         FVector LocationOffset = FVector::ZeroVector;
+        if(XMoveDistance > 0 && ShouldReturn())
+        {
+            XVelocity = -XVelocity;
+        }
         LocationOffset.X = DeltaTime * XVelocity;
         LocationOffset.Y = DeltaTime * YVelocity;
         //AddActorLocalOffset(LocationOffset);
         SetActorLocation(GetActorLocation() + LocationOffset);
     }
+    
+}
+
+bool AEnemyShip::ShouldReturn()
+{
+    return UKismetMathLibrary::Abs(GetActorLocation().X - XOriginalLocation) > XMoveDistance;
 }
 
 void AEnemyShip::SetVelocity(float XVel, float YVel)
@@ -108,4 +121,9 @@ void AEnemyShip::SetDestination(FVector Dest)
 void AEnemyShip::SetProjectileRotationOffset(FRotator Offset)
 {
     ProjectileRotationOffset = Offset;
+}
+
+void AEnemyShip::SetXMoveDistance(float Distance)
+{
+    XMoveDistance = Distance;
 }

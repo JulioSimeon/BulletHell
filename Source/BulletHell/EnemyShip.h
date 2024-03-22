@@ -30,6 +30,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void SetProjectileRotationOffset(FRotator Offset);
 
+	UFUNCTION(BlueprintCallable)
+	void SetXMoveDistance(float Distance);
+
 protected:
 	virtual void BeginPlay() override;
 
@@ -73,6 +76,12 @@ private:
 
 	FRotator ProjectileRotationOffset;
 
+	float XMoveDistance;
+
+	float XOriginalLocation;
+
 	void Move(float DeltaTime);
+
+	bool ShouldReturn();
 
 };
