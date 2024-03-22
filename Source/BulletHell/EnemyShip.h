@@ -73,4 +73,6 @@ private:
 
 	FRotator ProjectileRotationOffset;
 
+	void Move(float DeltaTime);
+
 };

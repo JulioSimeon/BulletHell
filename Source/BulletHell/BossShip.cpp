@@ -8,13 +8,16 @@
 void ABossShip::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
-    if(FVector::Dist(GetActorLocation(), Destination) == 0)
-    {
-        Destination = FVector::ZeroVector;
-    }
     if(!HasDestination())
     {
         OutofBoundsCheck();
+    }
+    else //if(HasDestination())
+    {
+        if(FVector::Dist(GetActorLocation(), Destination) == 0)
+        {
+            Destination = FVector::ZeroVector;
+        }
     }
     
     CheckSpawnCount();

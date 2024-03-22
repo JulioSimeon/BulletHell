@@ -4,6 +4,7 @@
 #include "BasePawn.h"
 #include "Components/CapsuleComponent.h"
 #include "Projectile.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 ABasePawn::ABasePawn()
@@ -25,6 +26,14 @@ ABasePawn::ABasePawn()
 void ABasePawn::HandleDestruction()
 {
 	//To do: Visual/sound effects
+	if(DeathSound)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, DeathSound, GetActorLocation());		
+	}
+	if(DeathParticles)
+	{
+		UGameplayStatics::SpawnEmitterAtLocation(this, DeathParticles, GetActorLocation(), GetActorRotation());
+	}
 }
 
 // Called when the game starts or when spawned
@@ -36,9 +45,12 @@ void ABasePawn::BeginPlay()
 
 void ABasePawn::Fire()
 {
-	
-	auto Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, ProjectileSpawnPoint->GetComponentLocation(), ProjectileSpawnPoint->GetComponentRotation());
-	Projectile->SetOwner(this);
+	if(LaunchSound)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, LaunchSound, ProjectileSpawnPoint->GetComponentLocation());
+	}
+	// auto Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, ProjectileSpawnPoint->GetComponentLocation(), ProjectileSpawnPoint->GetComponentRotation());
+	// Projectile->SetOwner(this);
 }
 
 // Called every frame

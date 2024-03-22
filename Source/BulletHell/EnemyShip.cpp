@@ -13,25 +13,7 @@ AEnemyShip::AEnemyShip()
 void AEnemyShip::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
-    if(Spinner)
-    {
-        AddActorLocalRotation(RotationVelocity * DeltaTime);
-    }
-    if(HasDestination())
-    {
-        FVector CurrentLocation = GetActorLocation();
-        float Speed = FMath::Sqrt(FMath::Square(XVelocity) + FMath::Square(YVelocity));
-        FVector NewLocation = FMath::VInterpConstantTo(CurrentLocation, Destination, DeltaTime, Speed);
-	    SetActorLocation(NewLocation);
-    }
-    else
-    {
-        FVector LocationOffset = FVector::ZeroVector;
-        LocationOffset.X = DeltaTime * XVelocity;
-        LocationOffset.Y = DeltaTime * YVelocity;
-        //AddActorLocalOffset(LocationOffset);
-        SetActorLocation(GetActorLocation() + LocationOffset);
-    }
+    Move(DeltaTime);
 }
 
 void AEnemyShip::HandleDestruction()
@@ -80,11 +62,36 @@ void AEnemyShip::Fire()
 
     auto Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, ProjectileSpawnPoint->GetComponentLocation(), ProjectileSpawnPoint->GetComponentRotation() + ProjectileRotationOffset);
 	Projectile->SetOwner(this);
+    
+    Super::Fire();
 }
 
 bool AEnemyShip::HasDestination()
 {
     return !Destination.Equals(FVector::ZeroVector);
+}
+
+void AEnemyShip::Move(float DeltaTime)
+{
+    if(Spinner)
+    {
+        AddActorLocalRotation(RotationVelocity * DeltaTime);
+    }
+    if(HasDestination())
+    {
+        FVector CurrentLocation = GetActorLocation();
+        float Speed = FMath::Sqrt(FMath::Square(XVelocity) + FMath::Square(YVelocity));
+        FVector NewLocation = FMath::VInterpConstantTo(CurrentLocation, Destination, DeltaTime, Speed);
+	    SetActorLocation(NewLocation);
+    }
+    else
+    {
+        FVector LocationOffset = FVector::ZeroVector;
+        LocationOffset.X = DeltaTime * XVelocity;
+        LocationOffset.Y = DeltaTime * YVelocity;
+        //AddActorLocalOffset(LocationOffset);
+        SetActorLocation(GetActorLocation() + LocationOffset);
+    }
 }
 
 void AEnemyShip::SetVelocity(float XVel, float YVel)

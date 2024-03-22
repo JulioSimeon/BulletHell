@@ -40,6 +40,8 @@ void APlayerShip::SetupPlayerInputComponent(class UInputComponent* PlayerInputCo
     PlayerInputComponent->BindAxis(TEXT("FireAlt"), this, &APlayerShip::AltFire);
     PlayerInputComponent->BindAction(TEXT("Fire"), IE_Pressed, this, &APlayerShip::Fire);
 
+    PlayerInputComponent->BindAction(TEXT("Pause"), IE_Pressed, this, &APlayerShip::PauseGame);
+
 }
 
 void APlayerShip::BeginPlay()
@@ -75,6 +77,7 @@ void APlayerShip::Fire()
 		Projectile->SetOwner(this);
 		//UE_LOG(LogTemp, Display, TEXT("%s"), *Rotation.ToString());
 	}
+    Super::Fire();
 }
 
 void APlayerShip::AltFire(float Value)
@@ -108,6 +111,10 @@ void APlayerShip::SetCamera()
         //Sets Camera
         TArray<AActor*> Cameras;
         UGameplayStatics::GetAllActorsOfClass(this, CameraToFind, Cameras);
-        ShipPlayerController->SetViewTarget(Cameras[0]);
+        if(Cameras.Num() > 0 && Cameras[0])
+        {
+            ShipPlayerController->SetViewTarget(Cameras[0]);
+        }
+        
     }
 }
