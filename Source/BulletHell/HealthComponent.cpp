@@ -64,3 +64,8 @@ float UHealthComponent::getMaxHealth()
 	return MaxHealth;
 }
 
+float UHealthComponent::GetHealthPercent() const
+{
+	return Health / MaxHealth;
+}
+

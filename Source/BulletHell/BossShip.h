@@ -49,6 +49,9 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Movement")
 	FVector2D XYLowerBoundary;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Combat")
+	int BossLevel = 1;
+
 	class UHealthComponent* HealthComponent;
 
 	class UHealthComponent* ChildHealthComponent;
@@ -59,6 +62,10 @@ private:
 	void CheckSpawnCount();
 
 	void SpawnChildShip();
+
+	void BossFire();
+
+	int CircularFireCounter{1};
 
 	UPROPERTY(VisibleAnywhere, Category = "Combat")
 	TArray<ABossShip*> ChildShips;

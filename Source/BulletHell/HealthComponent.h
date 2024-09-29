@@ -37,4 +37,8 @@ public:
 	void setMaxHealth(float NewMaxHealth);
 
 	float getMaxHealth();
+
+	UFUNCTION(BlueprintPure)
+	float GetHealthPercent() const;
+	
 };

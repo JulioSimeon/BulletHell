@@ -34,21 +34,36 @@ protected:
 	UFUNCTION(BlueprintImplementableEvent)
 	void PauseGame();
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	class UInputMappingContext* DefaultMappingContext;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	class UInputAction* FireAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UInputAction* AltFireAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UInputAction* PauseAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UInputAction* SwitchFireAction;
+
 private:
-	void MoveForward(float Value);
-
-	void MoveSideward(float Value);
-
 	void Fire();
 
-	void AltFire(float Value);
+	void SwitchFireMode();
+
+	void StartFire();
+
+	void EndFire();
 
 	void UpdateMovement();
 
 	void SetCamera();
 
-	UPROPERTY(EditAnywhere, Category = "Movement")
-	float Speed = 200.f;
+	UPROPERTY(EditAnywhere)
+	float InterpSpeed = 200.f;
 
 	FVector DeltaLocation;
 	
@@ -61,4 +76,6 @@ private:
 	TSubclassOf<class ACameraActor> CameraToFind;
 
 	APlayerController* ShipPlayerController;
+
+	bool bSwitchFireMode{false};
 };

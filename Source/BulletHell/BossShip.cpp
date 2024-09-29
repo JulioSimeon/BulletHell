@@ -2,6 +2,7 @@
 
 
 #include "BossShip.h"
+#include "Projectile.h"
 #include "HealthComponent.h"
 
 
@@ -19,15 +20,20 @@ void ABossShip::Tick(float DeltaTime)
             Destination = FVector::ZeroVector;
         }
     }
-    
-    CheckSpawnCount();
+    if(BossLevel == 1)
+    {
+        CheckSpawnCount();
+    }
 }
 
 void ABossShip::BeginPlay()
 {
-    Super::BeginPlay();
-    GetWorldTimerManager().SetTimer(FireRateTimerHandle, this, &ABossShip::Fire, FireRate, true);
-    GetWorldTimerManager().SetTimer(SpawnRateTimerHandle, this, &ABossShip::SpawnChildShip, SpawnRate, true);
+    ABasePawn::BeginPlay();
+    GetWorldTimerManager().SetTimer(FireRateTimerHandle, this, &ABossShip::BossFire, FireRate, true);
+    if(BossLevel == 1)
+    {
+        GetWorldTimerManager().SetTimer(SpawnRateTimerHandle, this, &ABossShip::SpawnChildShip, SpawnRate, true);
+    }
 }
 
 void ABossShip::OutofBoundsCheck()
@@ -84,6 +90,35 @@ void ABossShip::SpawnChildShip()
         }
     }
 	
+}
+
+void ABossShip::BossFire()
+{
+    if(BossLevel == 2)
+    {
+        if(CircularFireCounter % 30 != 0)
+        {
+            FRotator RotationOffset = FRotator(0, (12 * CircularFireCounter), 0);
+            auto Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, ProjectileSpawnPoint->GetComponentLocation(), ProjectileSpawnPoint->GetComponentRotation() + RotationOffset);
+            Projectile->SetOwner(this);
+        }
+        else
+        {
+            for(int i = 1; i <= 8; i++)
+            {
+                FRotator RotationOffset = FRotator(0, 45 * i, 0);
+                auto Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, ProjectileSpawnPoint->GetComponentLocation(), ProjectileSpawnPoint->GetComponentRotation() + RotationOffset);
+                Projectile->SetOwner(this);
+            }
+        }
+        CircularFireCounter++;
+        ABasePawn::Fire();
+    }
+    else
+    {
+        Super::Fire();
+    }
+    //Super::Fire();
 }
 
 void ABossShip::HandleDestruction()
